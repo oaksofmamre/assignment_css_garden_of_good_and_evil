@@ -1,0 +1,65 @@
+	<div class="container">
+		<div class="row">	
+
+																												<!-- CONFIG --> 
+			<div class="col-sm-6 col-md-4">
+			<form action="/config" class="border border-right-0 border-left-0 mb-3" method="post" disabled>
+				<fieldset>
+					<legend>Config Corner</legend>
+					<div class="form-group">
+						<div class="form-check form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" class="form-check-input" name="goodEvilChoice" value="good"> Good
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" class="form-check-input" name="goodEvilChoice" value="evil"> Evil
+							</label>
+						</div>
+					</div>
+																					<!-- COOKIE --> 
+					<div class="form-group">
+						<input type="text" class="form-control form-control" name="food" id="foodChoice" placeholder="Favorite cookie?">
+					</div>
+																					<!-- COLOR --> 
+					<div class="form-group">
+						<select id="colorChoice" class="form-control form-control">
+							<option selected>Favorite color?</option>
+							<option>Blue</option>
+							<option>Dark Gray</option>
+							<option>Green</option>
+							<option>Red</option>
+							<option>Orange</option>
+							<option>Turquoise</option>
+							<option>Light gray</option>
+							<option>White</option>
+						</select>
+					</div>
+																					<!-- SUBMIT --> 
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn" id="submitButton" value="Submit">
+					</div>			    
+				</fieldset>
+			</form>
+			</div>
+																												<!-- PICTURE --> 
+			<div class="col-sm-4 col-md-5 mb-3">
+				<img id="goodEvil-image" src="./images/flood.jpg" class= "img-fluid rounded border" alt="image of goodness - daryl hudeck - 2017-10">
+			</div>
+
+																												<!-- CARD --> 
+			<div class="col-sm-5 col-md-3 mb-3">
+				<div class="card">
+					<div id="goodEvil-color" class="card-header bg-light">
+						Data stored in cookie
+					</div>
+					<div class="card-body">
+						<h4 id="goodEvil-question" class="card-title">Favorite cookie?</h4>
+						<p id="goodEvil-answer" class="card-text">Chocolate chip!</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div> <!-- CONTAINER --> 
