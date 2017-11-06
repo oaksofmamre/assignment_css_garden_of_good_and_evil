@@ -2,55 +2,86 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Good and Evil</title>
-    <!-- <link rel="stylesheet" href="css/app.css"> -->
-    <link rel="stylesheet" href="public/css/bootstrap.css">
+	<link rel="stylesheet" href="public/css/bootstrap.css">
 </head>	
 
 <body>
+
 	<div class="container">
+		<div class="row">	
 
-<blockquote class="blockquote mt-5 mb-5">
-	“If only it were all so simple! If only there were evil people somewhere insidiously committing evil deeds, and it were necessary only to separate them from the rest of us and destroy them. But the line dividing good and evil cuts through the heart of every human being. And who is willing to destroy a piece of his own heart?”
-  <footer class="blockquote-footer">Aleksandr Solzhenitsyn in <cite title="Source Title">The Gulag Archipelago 1918-1956</cite></footer>
-</blockquote>		
+			<div class="col">
+			<blockquote class="blockquote mt-5 mb-5">
+				“If only it were all so simple! If only there were evil people somewhere insidiously committing evil deeds, and it were necessary only to separate them from the rest of us and destroy them. But the line dividing good and evil cuts through the heart of every human being. And who is willing to destroy a piece of his own heart?”
+				<footer class="blockquote-footer">Aleksandr Solzhenitsyn in <cite title="Source Title">The Gulag Archipelago 1918-1956</cite></footer>
+			</blockquote>		
+			</div>
 
-		<form action="/config" method="post" disabled>
-			<fieldset>
-				<legend>Configuration Corner</legend>
-				<!-- RADIO --> 
-    		<div class="form-group">
-					<div class="form-check form-check-inline">
-						<label class="form-check-label">
-							<input type="radio" class="form-check-input" name="goodEvilChoice" value="good"> Good
-						</label>
+		</div>
+	</div> <!-- CONTAINER --> 
+
+	<div class="container">
+		<div class="row">	
+
+																												<!-- CONFIG --> 
+			<div class="col-sm-6 col-md-4">
+			<form action="/config" class="border border-right-0 border-left-0 mb-3" method="post" disabled>
+				<fieldset>
+					<legend>Config Corner</legend>
+					<div class="form-group">
+						<div class="form-check form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" class="form-check-input" name="goodEvilChoice" value="good"> Good
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<label class="form-check-label">
+								<input type="radio" class="form-check-input" name="goodEvilChoice" value="evil"> Evil
+							</label>
+						</div>
 					</div>
-					<div class="form-check form-check-inline">
-						<label class="form-check-label">
-							<input type="radio" class="form-check-input" name="goodEvilChoice" value="evil"> Evil
-						</label>
+																					<!-- COOKIE --> 
+					<div class="form-group">
+						<input type="text" class="form-control form-control" name="food" id="foodChoice" placeholder="Favorite cookie?">
+					</div>
+																					<!-- COLOR --> 
+					<div class="form-group">
+						<select id="colorChoice" class="form-control form-control">
+							<option selected>Favorite color?</option>
+							<option>Red</option>
+							<option>Orange</option>
+							<option>Yellow</option>
+						</select>
+					</div>
+																					<!-- SUBMIT --> 
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn" value="Submit">
+					</div>			    
+				</fieldset>
+			</form>
+			</div>
+																												<!-- PICTURE --> 
+			<div class="col-sm-4 col-md-5 mb-3">
+				<img src="./public/images/flood.jpg" class= "img-fluid rounded border" alt="good, houston flood, daryl hudeck, 2017-10">
+			</div>
+
+																												<!-- CARD --> 
+			<div class="col-sm-5 col-md-3 mb-3">
+				<div class="card">
+					<div class="card-header">
+						Data stored in cookie
+					</div>
+					<div class="card-body">
+						<h4 class="card-title">Favorite cookie?</h4>
+						<p class="card-text">Chocolate chip!</p>
 					</div>
 				</div>
-				<!-- TEXT --> 
-				<div class="form-group">
-					<input type="text" class="form-control form-control" name="food" id="foodChoice" placeholder="Favorite food?">
-				</div>
-				<!-- SELECT --> 
-			  <div class="form-group">
-			    <select id="colorChoice" class="form-control form-control">
-			      <option selected>Favorite color?</option>
-			      <option>Red</option>
-			      <option>Orange</option>
-			      <option>Yellow</option>
-			    </select>
-			  </div>
-				<div class="form-group">
-					<input type="submit" class="btn btn-primary btn" value="Submit">
-				</div>			    
-			</fieldset>
-		</form>
-	</div>
+			</div>
+
+		</div>
+	</div> <!-- CONTAINER --> 
 </body>
 
 </html>
