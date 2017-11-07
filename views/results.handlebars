@@ -3,7 +3,7 @@
 
 																												<!-- CONFIG --> 
 			<div class="col-sm-6 col-md-4">
-			<form action="/config" class="border border-right-0 border-left-0 mb-3" method="post" disabled>
+			<form action="/update" class="border border-right-0 border-left-0 mb-3" method="post" disabled>
 				<fieldset>
 					<legend>Config Corner</legend>
 					<div class="form-group">
@@ -20,20 +20,20 @@
 					</div>
 																					<!-- COOKIE --> 
 					<div class="form-group">
-						<input type="text" class="form-control form-control" name="food" id="foodChoice" placeholder="Favorite cookie?">
+						<input type="text" class="form-control form-control" name="cookieChoice" id="foodChoice" placeholder="Favorite cookie?"> 
 					</div>
 																					<!-- COLOR --> 
 					<div class="form-group">
-						<select id="colorChoice" class="form-control form-control">
+						<select id="colorChoice" name="colorChoice" class="form-control form-control">
 							<option selected>Favorite color?</option>
-							<option>Blue</option>
-							<option>Dark Gray</option>
-							<option>Green</option>
-							<option>Red</option>
-							<option>Orange</option>
-							<option>Turquoise</option>
-							<option>Light gray</option>
-							<option>White</option>
+							<option value="bg-primary">Blue</option>
+							<option value="bg-secondary">Dark Gray</option>
+							<option value="bg-success">Green</option>
+							<option value="bg-danger">Red</option>
+							<option value="bg-warning">Orange</option>
+							<option value="bg-info">Turquoise</option>
+							<option value="bg-light">Light gray</option>
+							<option value="bg-white">White</option>
 						</select>
 					</div>
 																					<!-- SUBMIT --> 
@@ -45,18 +45,18 @@
 			</div>
 																												<!-- PICTURE --> 
 			<div class="col-sm-4 col-md-5 mb-3">
-				<img id="goodEvil-image" src="./images/flood.jpg" class= "img-fluid rounded border" alt="image of goodness - daryl hudeck - 2017-10">
+				<img id="goodEvil-image" src="./images/{{ choice }}" class= "img-fluid rounded border">
 			</div>
 
 																												<!-- CARD --> 
 			<div class="col-sm-5 col-md-3 mb-3">
 				<div class="card">
-					<div id="goodEvil-color" class="card-header bg-light">
-						Data stored in cookie
+					<div id="goodEvil-color" class="card-header {{ color }}">
+						Value stored in a cookie
 					</div>
 					<div class="card-body">
 						<h4 id="goodEvil-question" class="card-title">Favorite cookie?</h4>
-						<p id="goodEvil-answer" class="card-text">Chocolate chip!</p>
+						<p id="goodEvil-answer" class="card-text">{{ cookie }}</p>
 					</div>
 				</div>
 			</div>
