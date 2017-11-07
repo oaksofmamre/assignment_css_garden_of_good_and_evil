@@ -20,6 +20,7 @@ localhost:3000
 Highlights: 
 -----
 - front-end styled with Bootstrap
+- responsive website design
 - back-end uses node.js, and Express for routing
 - with Handlebars for templating
 - makes use of GET and POST http methods
